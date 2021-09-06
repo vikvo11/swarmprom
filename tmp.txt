@@ -19,3 +19,17 @@ docker container rm $(docker ps -q)
 $(docker container ls -q)
 
 docker container rm $(docker container ls -q) -f
+
+docker stack rm mon
+
+
+####
+
+docker service ls
+ip r
+
+####
+docker swarm join-token worker
+docker swarm join --token SWMTKN-1-2y5sdso6sru04ks61h533wc88f78ls98pdf53o77bgcy2wf8zc-cdmfx3nuj08flh1vuf80m0a40 192.168.0.18:2377
+
+docker swarm join-token manager
